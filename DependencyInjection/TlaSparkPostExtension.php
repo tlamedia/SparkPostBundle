@@ -34,7 +34,7 @@ final class TlaSparkPostExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
         
-        $def = $container->getDefinition('tla_sparkpost.api_client');
+        $def = $container->getDefinition('tla_spark_post.api_client');
         $def->replaceArgument(1, [
             'key' => $config['api_key']
         ]);

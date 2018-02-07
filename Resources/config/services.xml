@@ -5,12 +5,12 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="tla_sparkpost.http_client" class="GuzzleHttp\Client" public="true" />
-        <service id="tla_sparkpost.http_adapter" class="Http\Adapter\Guzzle6\Client" public="true">
-            <argument type="service" id="tla_sparkpost.http_client" />
+        <service id="tla_spark_post.http_client" class="GuzzleHttp\Client" public="true" />
+        <service id="tla_spark_post.http_adapter" class="Http\Adapter\Guzzle6\Client" public="true">
+            <argument type="service" id="tla_spark_post.http_client" />
         </service>
-        <service id="tla_sparkpost.api_client" class="SparkPost\SparkPost" public="true">
-            <argument type="service" id="tla_sparkpost.http_adapter" />
+        <service id="tla_spark_post.api_client" class="SparkPost\SparkPost" public="true">
+            <argument type="service" id="tla_spark_post.http_adapter" />
             <argument></argument>
         </service>
     </services>

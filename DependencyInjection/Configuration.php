@@ -27,7 +27,7 @@ final class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('tla_sparkpost');
+        $rootNode = $treeBuilder->root('tla_spark_post');
         
         $rootNode
             ->children()
