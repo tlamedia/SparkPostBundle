@@ -1,0 +1,37 @@
+{
+    "name": "tlamedia/sparkpost-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony SparkPostBundle",
+    "keywords": ["sparkpost"],
+    "homepage": "https://github.com/tlamedia",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Torben Lundsgaard",
+            "email": "kontakt@tlamedia.dk"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "guzzlehttp/guzzle": "^6.3",
+        "php-http/guzzle6-adapter": "^1.1",
+        "sparkpost/sparkpost": "^2.1"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^4.0",
+        "matthiasnoback/symfony-dependency-injection-test": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tla\\SparkPostBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tla\\SparkPostBundle\\Tests\\": "/Tests/"
+        }
+    }
+}

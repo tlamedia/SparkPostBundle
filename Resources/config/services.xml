@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="tla_sparkpost.http_client" class="GuzzleHttp\Client" public="true" />
+        <service id="tla_sparkpost.http_adapter" class="Http\Adapter\Guzzle6\Client" public="true">
+            <argument type="service" id="tla_sparkpost.http_client" />
+        </service>
+        <service id="tla_sparkpost.api_client" class="SparkPost\SparkPost" public="true">
+            <argument type="service" id="tla_sparkpost.http_adapter" />
+            <argument></argument>
+        </service>
+    </services>
+
+</container>
