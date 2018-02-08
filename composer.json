@@ -1,7 +1,7 @@
 {
     "name": "tlamedia/sparkpost-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony SparkPostBundle",
+    "description": "The SparkPostBundle integrates the SparkPost PHP library with Symfony, allowing you to interact with the Sparkpost API in your Symfony projects.",
     "keywords": ["sparkpost", "bundle", "symfony"],
     "homepage": "https://github.com/tlamedia",
     "license": "MIT",
