@@ -45,55 +45,55 @@ class SomeController extends Controller
     public function sendAction()
     {
 
-				$sparky = $this->getContainer()->get('tla_spark_post.api_client');
-				
-				$promise = $sparky->transmissions->post([
-				
-				    'content' => [
-				        'from' => [
-				            'name' => 'YOUR_NAME',
-				            'email' => 'YOUR_EMAIL',
-				        ],
-				        'subject' => 'My first mail using SparkPostBundle',
-				        'html' => '<html><body><h1>Congratulations, {{name}}!</h1><p>You just sent your first mail!</p></body></html>',
-				        'text' => 'Congratulations, {{name}}!! You just sent your first mail!',
-				        
-				    ],
-				    'substitution_data' => ['name' => 'YOUR_FIRST_NAME'],
-				    'recipients' => [
-				        [
-				            'address' => [
-				                'name' => 'YOUR_NAME',
-				                'email' => 'YOUR_EMAIL',
-				            ],
-				        ],
-				    ],
-				    'cc' => [
-				        [
-				            'address' => [
-				                'name' => 'ANOTHER_NAME',
-				                'email' => 'ANOTHER_EMAIL',
-				            ],
-				        ],
-				    ],
-				    'bcc' => [
-				        [
-				            'address' => [
-				                'name' => 'AND_ANOTHER_NAME',
-				                'email' => 'AND_ANOTHER_EMAIL',
-				            ],
-				        ],
-				    ],
-				]);
-				
-				$promise = $sparky->transmissions->get();
-				
-				try {
-				    $promise->wait();
-				} catch (\Throwable $t) {
-				    echo $t->getCode()."\n";
-				    echo $t->getMessage()."\n";
-				}
+        $sparky = $this->getContainer()->get('tla_spark_post.api_client');
+        
+        $promise = $sparky->transmissions->post([
+        
+            'content' => [
+                'from' => [
+                    'name' => 'YOUR_NAME',
+                    'email' => 'YOUR_EMAIL',
+                ],
+                'subject' => 'My first mail using SparkPostBundle',
+                'html' => '<html><body><h1>Congratulations, {{name}}!</h1><p>You just sent your first mail!</p></body></html>',
+                'text' => 'Congratulations, {{name}}!! You just sent your first mail!',
+                
+            ],
+            'substitution_data' => ['name' => 'YOUR_FIRST_NAME'],
+            'recipients' => [
+                [
+                    'address' => [
+                        'name' => 'YOUR_NAME',
+                        'email' => 'YOUR_EMAIL',
+                    ],
+                ],
+            ],
+            'cc' => [
+                [
+                    'address' => [
+                        'name' => 'ANOTHER_NAME',
+                        'email' => 'ANOTHER_EMAIL',
+                    ],
+                ],
+            ],
+            'bcc' => [
+                [
+                    'address' => [
+                        'name' => 'AND_ANOTHER_NAME',
+                        'email' => 'AND_ANOTHER_EMAIL',
+                    ],
+                ],
+            ],
+        ]);
+        
+        $promise = $sparky->transmissions->get();
+        
+        try {
+            $promise->wait();
+        } catch (\Throwable $t) {
+            echo $t->getCode()."\n";
+            echo $t->getMessage()."\n";
+        }
 
     }
 }
