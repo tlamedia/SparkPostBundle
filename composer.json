@@ -2,7 +2,7 @@
     "name": "tlamedia/sparkpost-bundle",
     "type": "symfony-bundle",
     "description": "Symfony SparkPostBundle",
-    "keywords": ["sparkpost"],
+    "keywords": ["sparkpost", "bundle", "symfony"],
     "homepage": "https://github.com/tlamedia",
     "license": "MIT",
     "authors": [
