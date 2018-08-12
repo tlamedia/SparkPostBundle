@@ -2,6 +2,9 @@
 
 The `SparkPostBundle` integrates the [SparkPost](https://github.com/SparkPost/php-sparkpost) PHP library with Symfony.
 
+[![Latest Stable Version](https://poser.pugx.org/tlamedia/sparkpost-bundle/v/stable)](https://packagist.org/packages/tlamedia/sparkpost-bundle) 
+[![Build Status](https://api.travis-ci.org/tlamedia/SparkPostBundle.svg?branch=master)](https://travis-ci.org/tlamedia/SparkPostBundle)
+[![License](https://poser.pugx.org/tlamedia/sparkpost-bundle/license)](https://packagist.org/packages/tlamedia/sparkpost-bundle)
 
 ## Installation
 
