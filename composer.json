@@ -25,11 +25,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Tla\\SparkPostBundle\\": ""
-        },
-        "exclude-from-classmap": [
-            "/Tests/"
-        ]
+            "Tla\\SparkPostBundle\\": "src/"
+        }
     },
     "autoload-dev": {
         "psr-4": {
