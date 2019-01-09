@@ -13,6 +13,7 @@
             <argument type="service" id="tla_spark_post.http_adapter" />
             <argument></argument>
         </service>
+        <service id="SparkPost\SparkPost" alias="tla_spark_post.api_client" />
     </services>
 
 </container>
