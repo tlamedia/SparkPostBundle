@@ -15,13 +15,12 @@ Get the bundlle:
 Then enable it in your kernel:
 
 ```php
-// app/AppKernel.php
-public function registerBundles()
-{
-$bundles = array(
-//...
-new Tla\SparkPostBundle\TlaSparkPostBundle(),
-//...
+// config/bundles.php
+return [
+    //...
+    Tla\SparkPostBundle\TlaSparkPostBundle::class => ['all' => true],
+    //...
+];
 ```
 
 
@@ -30,7 +29,7 @@ new Tla\SparkPostBundle\TlaSparkPostBundle(),
 Configure the API key to use:
 
 ```yaml
-# app/config/config.yml
+# config/packages/tla_spark_post.yml
 tla_spark_post:
     api_key: 'YOUR_API_KEY' # Replace with your own
 ```
